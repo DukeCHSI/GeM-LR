@@ -2,11 +2,11 @@
 
 ## Overview:
 
-This repository contains the Matlab codes for estimating GeM-LR by EM algorithm and perform discriminative variable selection (DIME). This tool is the results of the publication entitled "GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies". 
+This repository contains the Matlab codes for estimating GeM-LR (v1.0) by EM algorithm and perform discriminative variable selection (DIME). This tool is the results of the publication entitled "GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies". 
 
-When using this code in your research, please cite the publication: Lin L, Spreng RL, Seaton KE, Dennison SM, Dahora LC, Schuster DJ, Sawant S, Gilbert P, Fong Y, Kisalu N, Pollard AJ, Tomaras GD, and Li J. GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies. JOURNAL NAME, VOLUME, PAGE. https://doi.org/XX.XXXX/...
+When using this code in your research, please cite the publication: Lin L, Spreng RL, Seaton KE, Dennison SM, Dahora LC, Schuster DJ, Sawant S, Gilbert P, Fong Y, Kisalu N, Pollard AJ, Tomaras GD, and Li J. GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies. [JOURNAL NAME, VOLUME, PAGE. https://doi.org/XX.XXXX/... will appear here].
 
-Alternatively, please cite this repository as Lin L, Spreng RL and Li J. GeM-LR: An EM based algorithm for performing discriminative variable selection (DIME)[Computer Software](2023).
+Alternatively, please cite this repository as Lin L, Spreng RL and Li J. GeM-LR: An EM based algorithm for performing discriminative variable selection (DIME) [Computer Software] (2023).
 
 ## Getting Started:
 
@@ -20,10 +20,26 @@ This package uses example data files, which are located in the directory ../Data
  
 3. Remarks on usage:
 
-  3.1. If MLMoption.DISTR=='binomial', classification is performed. If MLMoption.DISTR=='normal', regression is performed.
+  - If MLMoption.DISTR=='binomial', classification is performed. If MLMoption.DISTR=='normal', regression is performed.
 
-  3.2. Performance of classification can be evaluated by AUC or classification accuracy.
+  - Performance of classification can be evaluated by AUC or classification accuracy.
 
-  3.3. Performance of regression is evaluated by mean squared error, that is, the sum of squared residual normalized by the number of data points.
+  - Performance of regression is evaluated by mean squared error, that is, the sum of squared residual normalized by the number of data points.
 
-  3.4. MLMoption.NOEM=1 (default is 0). If set to 1, EM update of the mixture model is bypassed, the model formed by an initialization scheme is used. Specifically, k-means clustering is applied to partition the data, and then a Gaussian distribution is estimated for each cluster. The mixture model takes these Gaussian components and use the cluster proportions as the prior probabilities for the components.
+  - MLMoption.NOEM=1 (default is 0). If set to 1, EM update of the mixture model is bypassed, the model formed by an initialization scheme is used. Specifically, k-means clustering is applied to partition the data, and then a Gaussian distribution is estimated for each cluster. The mixture model takes these Gaussian components and use the cluster proportions as the prior probabilities for the components.
+
+# Version history
+Version 1.0: Initial release
+
+# Help
+If you need help or have suggestions, you may communicate through GitHub Discussion or contact Dr. Lin Lin via email at ll86@duke.edu.
+
+# Author
+This code was primarly developed by Dr. Lin Lin (ll86@duke.edu). Other contributors to code development include NAME (Email).
+
+# License
+This project is licensed under the GNU GPLv3 license. Please see LICENSE.md file for details.
+
+[![DOI](https://zenodo.org/badge/521721872.svg)](https://zenodo.org/badge/latestdoi/521721872)
+
+
