@@ -40,6 +40,5 @@ This code was  co-developed by Dr. Lin Lin (ll86@duke.edu) and Dr. Jia Li (jol2@
 # License
 This project is licensed under the GNU GPLv3 license. Please see LICENSE.md file for details.
 
-[![DOI](https://zenodo.org/badge/521721872.svg)](https://zenodo.org/badge/latestdoi/521721872)
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10274995.svg)](https://doi.org/10.5281/zenodo.10274995)
 
