@@ -4,9 +4,9 @@
 
 This repository contains the Matlab codes for estimating GeM-LR (v1.0) by EM algorithm and perform discriminative variable selection (DIME). This tool is the results of the publication entitled "GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies". 
 
-When using this code in your research, please cite the publication: Lin L, Spreng RL, Seaton KE, Dennison SM, Dahora LC, Schuster DJ, Sawant S, Gilbert P, Fong Y, Kisalu N, Pollard AJ, Tomaras GD, and Li J. GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies. [JOURNAL NAME, VOLUME, PAGE. https://doi.org/XX.XXXX/... will appear here].
+When using this code in your research, please cite the publication: Lin L, Spreng RL, Seaton KE, Dennison SM, Dahora LC, Schuster DJ, Sawant S, Gilbert P, Fong Y, Kisalu N, Pollard AJ, Tomaras GD, and Li J. (2024) GeM-LR: Discovering predictive biomarkers for small datasets in vaccine studies. [JOURNAL NAME, VOLUME, PAGE. https://doi.org/XX.XXXX/... will appear here].
 
-Alternatively, please cite this repository as Lin L, Spreng RL and Li J. GeM-LR: An EM based algorithm for performing discriminative variable selection (DIME) [Computer Software] (2023).
+Alternatively, please cite this repository as Lin L and Li J. GeM-LR: Algorithms for estimating generative mixture of logistic regression and performing Discriminative Variable Selection (DIME) [Computer Software] (2023).
 
 ## Getting Started:
 
@@ -35,7 +35,7 @@ Version 1.0: Initial release
 If you need help or have suggestions, you may communicate through GitHub Discussion or contact Dr. Lin Lin via email at ll86@duke.edu.
 
 # Author
-This code was primarly developed by Dr. Lin Lin (ll86@duke.edu). Other contributors to code development include NAME (Email).
+This code was  co-developed by Dr. Lin Lin (ll86@duke.edu) and Dr. Jia Li (jol2@psu.edu).
 
 # License
 This project is licensed under the GNU GPLv3 license. Please see LICENSE.md file for details.
