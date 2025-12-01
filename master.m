@@ -36,7 +36,29 @@ cvAUC=runCV_wts(kkk, ncmp,nseeds,rangeSeed,vargmm, Y1,X1,MLMoption, wts,5);
 mean(mean(cvAUC),3)% mean cvAUC for GeM-LR models with different number of components
 
 MLMoption.lambdaLasso=MLMoption.lambdaLasso(1)*ones(1,ncmp);
+rseeds = datasample(1:1:rangeSeed,nseeds,'Replace',false);
 [c, beta, ~, ~, ~, ~, ~,~]=estimateBestSD(X1s(:,vargmm),X1s(:,2:size(X1s,2)),Y1, MLMoption,rseeds); 
 [~,a2,mu2,sigma2]=GMMFormatConvert(size(vargmm,2),c);  
 [pyi,pij]=MLMclassify(a2,mu2,sigma2,beta,X1s(:,vargmm),X1s(:,2:size(X1s,2)));
 [val, clusterid] = max(pij,[],2);
+
+%% Example plot routine to visulize model output
+rowNames = {'Intercept','age','BMI','race','bhvrisk', 'ADCP'};
+colNames = {'Cluster 1','Cluster 2'};
+h = heatmap(beta);
+h.YDisplayLabels = rowNames;
+h.XDisplayLabels = colNames;
+h.CellLabelColor = 'none'; % hides all cell labels
+n = 256;
+neg = [linspace(0,1,n/2)' ... % R: 0 → 1
+linspace(0,1,n/2)' ... % G: 0 → 1
+ones(n/2,1)]; % B: 1 → 1 (blue → white)
+pos = [ones(n/2,1) ... % R: 1 → 1
+linspace(1,0,n/2)' ... % G: 1 → 0
+linspace(1,0,n/2)']; % B: 1 → 0 (white → red)
+cmap = [neg; pos];
+% Apply colormap directly to the heatmap
+h.Colormap = cmap;
+% Symmetric color limits so 0 is mapped to white
+cmax = max(abs(beta(:)));
+h.ColorLimits = [-cmax cmax];
